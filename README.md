@@ -10,6 +10,8 @@ Below are some of the resources I have used to help create this express-movie-da
 * [Jira Kanban Board](https://www.atlassian.com/software/jira)
 * [Entity Relationship Diagrams](https://app.diagrams.net/)
 * [RESTful API Tutorial](https://restfulapi.net/)
+* 
+
 
  Below are Movie Clips of the movies I used in my database file:
 
@@ -17,3 +19,5 @@ Below are some of the resources I have used to help create this express-movie-da
  Thurgood Marshall movie clip:  https://www.imdb.com/video/vi3998398745
  The Color Purple movie clips: http://j.mp/1zeQHgZ
  The Mask movie clips: http://j.mp/1COeQuV
+
+
