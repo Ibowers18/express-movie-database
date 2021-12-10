@@ -1,4 +1,5 @@
-const {Sequelize , DataTypes, Model} = require('sequelize')
+const {Sequelize, DataTypes, Model} = require('sequelize')
+const path = require('path')
 
 //create a database named 'sequelize'
 //we will add models to this db in index

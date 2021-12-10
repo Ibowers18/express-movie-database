@@ -1,18 +1,18 @@
 const {sequelize, DataTypes, Model} = require('./db')
+//import models
+const { Movie } = require('./models/Movie')
+const { Crew } = require('./models/Crew')
+const { Cast } = require('./models/Cast')
 
-//create model for Movie in database
-class Movie extends Model {
-}
-    //create attributes for model using init methos
-    Movie.init({
-        movie_id: DataType.INTEGER,
-        title: DataType.STRING,
-        rating: DataType.String,
-        popularity: DataType.STRING
-    
-},  {
-    //specifies what database the model is stored in
-    sequelize, 
-    timestamps: false
-})
-module.exports = {Movie}
+//associate models
+//adds foreign key to musician table connecting a musician instance to a specific band
+Crew.belongsTo(Movie)
+//gives us sequelize methods for a one to many relationship
+Movie.hasMany(Crew)
+
+// Cast.belongsTo(Movie)
+// //gives us sequelize methods for a one to many relationship
+// Movie.hasMany(Cast)
+
+//export models with added associations
+module.exports = {Movie, Crew, Cast,sequelize}
