@@ -23,27 +23,24 @@ describe('Movie database', () => {
         ]
         
        //create array of Cast
-        const arrayOfCasts = [
+        const arrayOfcast = [
             {movie_id:501, gender: 'male', char_name: 'Sean Connery', cast_order: 'lead Actor'},
             {movie_id:502, gender: 'male',char_name: 'Chadwick Bozeman', cast_order: 'lead Actor'},
             {movie_id:503, gender: 'female', char_name: 'Whoopi Goldberg', cast_order: 'lead Actress'},
-            {movie_id:504, gender: 'male', char_name: 'Jim Carey', cast_order: 'Lead Actor'}
+            {movie_id:504, gender: 'male', char_name: 'Jim Carey', cast_order: 'lead Actor'}
          ]
 
        //create array of Crew
         const arrayOfcrew = [
           {movie_id:501, gender: 'male', crew_name: 'Guy Hamilton', crew_position: 'Director'},
           {movie_id:502, gender: 'male', crew_name: 'Reginald Hudlin', crew_position: 'Director'},
-          {movie_id:503, gender: 'female', crew_name: 'Steven Spielberg', crew_position: 'Director'},
-          {movie_id:504, gender: 'male', crew_name: 'Peter Bogdanovich', ccrew_position: 'Director'}
+          {movie_id:503, gender: 'male', crew_name: 'Steven Spielberg', crew_position: 'Director'},
+          {movie_id:504, gender: 'male', crew_name: 'Peter Bogdanovich', crew_position: 'Director'}
         ]
 
         //add array to database
 
-    //   await Movie.bulkCreate(arrayOfMovies)
-    //   await Cast.bulkCreate(arraysOfCasts)
-    //   await Crew.bulkCreate(arraysOfCrews)
-
+    
 
     //create instance of Movie model for testing
     test('Movie has items', async() => {
@@ -69,7 +66,7 @@ describe('Movie database', () => {
     
     //create instance of Cast model for testing
       test('Cast has items', async() => {
-        await Cast.bulkCreate(arrayOfCasts)
+        await Cast.bulkCreate(arrayOfcast)
      const testcast = await Cast.findOne({
             where:
             {cast_order: 'lead Actor'}});
@@ -78,17 +75,7 @@ describe('Movie database', () => {
 
     })
 
-//     //create instance of Movie model for testing
-//     test('Movie has items', async() => {
-//        await Movie.bulkCreate(arrayOfMovies)
-//     })
-//     //read test instance from db
-   
-//     const testMovie = await Movie.findOne({
-//        where:
-//         {movie_id: 503}});
-//     expect(testMovie.movie_id).toBe(503)
-//     })
+
 })
     afterAll(async()=> {
     //   ({force:true})
